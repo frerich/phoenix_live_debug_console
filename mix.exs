@@ -32,7 +32,6 @@ defmodule PhoenixLiveDebugConsole.MixProject do
 
   defp aliases do
     [
-      compile: ["assets.deploy", "compile"],
       "assets.deploy": ["esbuild default --minify"]
     ]
   end

@@ -10,11 +10,14 @@ defmodule PhoenixLiveDebugConsole do
 
   import Underthehood
 
-  @js_code File.read!("priv/static/assets/app.js")
-  @external_resource "priv/static/assets/app.js"
+  js_path = Path.join(__DIR__, "../priv/static/assets/app.js")
+  css_path = Path.join(__DIR__, "../priv/static/assets/app.css")
 
-  @css_code File.read!("priv/static/assets/app.css")
-  @external_resource "priv/static/assets/app.css"
+  @external_resource js_path
+  @external_resource css_path
+
+  @app_js File.read!(js_path)
+  @app_css File.read!(css_path)
 
   def mount(_params, session, socket) do
     socket =
@@ -29,14 +32,14 @@ defmodule PhoenixLiveDebugConsole do
   def render(assigns) do
     assigns =
       assigns
-      |> Map.put(:js_code, @js_code)
-      |> Map.put(:css_code, @css_code)
+      |> Map.put(:app_js, @app_js)
+      |> Map.put(:app_css, @app_css)
 
     ~H"""
       <body>
         <%= csrf_meta_tag() %>
-        <style><%= raw(@css_code) %></style>
-        <script><%= raw(@js_code) %></script>
+        <style><%= raw(@app_js) %></style>
+        <script><%= raw(@app_css) %></script>
         <style>
           .container { padding: 0 }
           body { margin: 0 }
