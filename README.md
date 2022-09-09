@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/533425/189327007-a3fc4bda-8519-4a02-9a
 ```elixir
 def deps do
   [
-    {:phoenix_live_debug_console, "~> 0.1.0"}
+    {:phoenix_live_debug_console, "~> 0.1"}
   ]
 end
 ```
