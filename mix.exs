@@ -14,7 +14,8 @@ defmodule PhoenixLiveDebugConsole.MixProject do
       name: "Phoenix LiveDebugConsole",
       docs: [
         extras: ["README.md", "LICENSE.md"],
-        main: "readme"
+        main: "readme",
+        api_reference: false
       ],
       package: package()
     ]
@@ -34,7 +35,8 @@ defmodule PhoenixLiveDebugConsole.MixProject do
       {:phoenix_live_view, "~> 0.17"},
       {:jason, "~> 1.0"},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
-      {:esbuild, "~> 0.4", runtime: Mix.env() == :dev}
+      {:esbuild, "~> 0.4", runtime: Mix.env() == :dev},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
