@@ -21,8 +21,9 @@ defmodule PhoenixLiveDebugConsole.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      underthehood: "~> 0.1",
-      phoenix_live_view: "~> 0.17"
+      {:underthehood, "~> 0.1"},
+      {:phoenix_live_view, "~> 0.17"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 end

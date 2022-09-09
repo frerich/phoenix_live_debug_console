@@ -1,4 +1,6 @@
 defmodule PhoenixLiveDebugConsole do
+  @moduledoc false
+
   import Phoenix.LiveView
   import Phoenix.LiveView.Helpers
 
