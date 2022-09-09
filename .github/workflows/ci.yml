@@ -17,14 +17,14 @@ jobs:
 
     strategy:
       matrix:
-        elixir: [1.12.3, 1.13.4]
-        otp: [24.1]
+        elixir: ["1.12.3", "1.13.4", "1.14.0"]
+        otp: ["23.3.4", "24.3.4"]
 
     steps:
     - uses: actions/checkout@v2
 
     - name: Set up Elixir
-      uses: erlef/setup-beam@988e02bfe678367a02564f65ca2e37726dc0268f
+      uses: erlef/setup-beam@v1
       with:
         elixir-version: ${{ matrix.elixir }}
         otp-version: ${{ matrix.otp }}
