@@ -1,7 +1,11 @@
 # Phoenix LiveDebugConsole
 
 This package implements an extension to the error view shown in Phoenix
-applications, adding a fully-interactive IEx shell.
+applications, adding a fully-interactive IEx shell. Here's a video of me
+triggering an error in a Phoenix application and then poking around a
+little bit using the live debug console:
+
+https://user-images.githubusercontent.com/533425/189327007-a3fc4bda-8519-4a02-9a7c-f8b1331e19a9.mov
 
 ## Installation
 
