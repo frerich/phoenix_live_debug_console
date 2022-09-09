@@ -7,7 +7,8 @@ defmodule PhoenixLiveDebugConsole.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
     ]
   end
 
@@ -24,7 +25,14 @@ defmodule PhoenixLiveDebugConsole.MixProject do
       {:underthehood, "~> 0.1"},
       {:phoenix_live_view, "~> 0.17"},
       {:jason, "~> 1.0"},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:esbuild, "~> 0.4", runtime: Mix.env() == :dev}
+    ]
+  end
+
+  defp aliases do
+    [
+      "assets.deploy": ["esbuild default", "phx.digest"]
     ]
   end
 end
