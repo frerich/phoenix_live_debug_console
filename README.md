@@ -9,7 +9,11 @@ https://user-images.githubusercontent.com/533425/189327007-a3fc4bda-8519-4a02-9a
 
 ## Installation
 
-1.  Install the package by adding `phoenix_live_debug_console` to your list of
+1.  This package currently requires that your application uses a bleeding
+    edge development build of Phoenix which has
+    https://github.com/phoenixframework/phoenix/pull/4938 applied.
+
+2.  Install the package by adding `phoenix_live_debug_console` to your list of
     dependencies in `mix.exs`:
 ```elixir
 def deps do
@@ -19,7 +23,7 @@ def deps do
 end
 ```
 
-2. Configure the endpoint of your application such that `debug_errors` and
+3. Configure the endpoint of your application such that `debug_errors` and
    `debug_error_handlers` are set as follows:
 ```elixir
 config :my_app, MyAppWeb.Endpoint,
