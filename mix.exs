@@ -23,6 +23,7 @@ defmodule PhoenixLiveDebugConsole.MixProject do
     [
       {:underthehood, "~> 0.1"},
       {:phoenix_live_view, "~> 0.17"},
+      {:jason, "~> 1.0"},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
