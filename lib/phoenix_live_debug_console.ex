@@ -38,8 +38,8 @@ defmodule PhoenixLiveDebugConsole do
     ~H"""
       <body>
         <%= csrf_meta_tag() %>
-        <style><%= raw(@app_js) %></style>
-        <script><%= raw(@app_css) %></script>
+        <script><%= raw(@app_js) %></script>
+        <style><%= raw(@app_css) %></style>
         <style>
           .container { padding: 0 }
           body { margin: 0 }
