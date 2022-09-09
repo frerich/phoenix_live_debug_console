@@ -49,6 +49,9 @@ jobs:
     - name: Compile dependencies
       run: mix deps.compile
 
+    - name: Rebuild assets
+      run: mix assets.deploy
+
     - name: Compile sources
       run: mix compile --warnings-as-errors
 
