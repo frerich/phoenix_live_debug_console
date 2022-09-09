@@ -10,8 +10,8 @@ defmodule PhoenixLiveDebugConsole do
 
   import Underthehood
 
-  js_path = Path.join(__DIR__, "../priv/static/assets/app.js")
-  css_path = Path.join(__DIR__, "../priv/static/assets/app.css")
+  js_path = Path.join(__DIR__, "../dist/static/assets/app.js")
+  css_path = Path.join(__DIR__, "../dist/static/assets/app.css")
 
   @external_resource js_path
   @external_resource css_path
