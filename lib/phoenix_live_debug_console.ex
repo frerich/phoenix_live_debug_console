@@ -1,7 +1,8 @@
 defmodule PhoenixLiveDebugConsole do
   @moduledoc false
 
-  import Phoenix.LiveView
+  use Phoenix.LiveView
+
   import Phoenix.LiveView.Helpers
 
   import Phoenix.HTML, only: [javascript_escape: 1]
